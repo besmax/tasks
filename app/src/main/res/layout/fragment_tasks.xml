@@ -5,9 +5,7 @@
     tools:context=".TasksFragment">
 
     <data>
-        <variable
-            name=""
-            type=""/>
+
     </data>
 
     <LinearLayout
