@@ -5,7 +5,9 @@
     tools:context=".TasksFragment">
 
     <data>
-
+        <variable
+            name="viewModel"
+            type="bes.max.tasks.TasksViewModel"/>
     </data>
 
     <LinearLayout
