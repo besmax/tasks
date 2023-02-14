@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import bes.max.tasks.databinding.FragmentTasksBinding
 
-
 class TasksFragment : Fragment() {
 
     private var _binding: FragmentTasksBinding? = null
@@ -27,6 +26,7 @@ class TasksFragment : Fragment() {
         val viewModel = ViewModelProvider(this, viewModelFactory)
             .get(TasksViewModel::class.java)
         binding.viewModel = viewModel
+        binding.lifecycleOwner = viewLifecycleOwner
 
         return view
     }
