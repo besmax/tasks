@@ -1,10 +1,10 @@
 package bes.max.tasks
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import bes.max.tasks.databinding.FragmentTasksBinding
 
@@ -27,6 +27,9 @@ class TasksFragment : Fragment() {
             .get(TasksViewModel::class.java)
         binding.viewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
+
+        val adapter = TaskItemAdapter()
+        binding.tasksList.adapter = adapter
 
         return view
     }
